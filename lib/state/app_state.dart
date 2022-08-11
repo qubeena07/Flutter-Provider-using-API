@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:provider_api/model/post_model.dart';
 
 class AppState extends ChangeNotifier {
   int age = 10;
@@ -40,6 +41,14 @@ class AppState extends ChangeNotifier {
   bool change = false;
   void updateWidget() {
     change = !change;
+    notifyListeners();
+  }
+
+  //Provider with rest api
+
+  List<PostModel> dataList = [];
+  void updatePostModel(List<PostModel> dataList) {
+    this.dataList = dataList;
     notifyListeners();
   }
 }
