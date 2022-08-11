@@ -18,14 +18,14 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "My name is ${value.name} and age is ${value.age}",
+                "My name is ${value.name}",
                 style: const TextStyle(fontSize: 20),
               ),
               CupertinoButton(
                   color: Colors.blue,
                   child: const Text("Press Event"),
                   onPressed: () {
-                    value.updateValue(19, "tiktik");
+                    value.getName("Huraaaay");
                   })
             ],
           );
